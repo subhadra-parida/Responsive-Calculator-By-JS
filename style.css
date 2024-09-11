@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Adjust container to account for the fixed navbar */
+.container {
+    margin-top: 60px; /* Adjust this value if necessary */
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #e0f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  /* Stacks heading and calculator vertically */
+}
+
+/* Calculator Styles */
+.calculator {
+    background: #37474f;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px; /* Ensures the calculator doesn't get too wide on large screens */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style the heading */
+.calculator-heading {
+    text-align: center;
+    color: #263238;
+    margin-bottom: 20px;   
+    font-size: 2.5rem;    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styles */
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 65px;
+    border-radius: 12px;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background: #546e7a;
+    font-size: 22px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+.calculator form input:hover {
+    background: #78909c;
+    background-color: lightgreen;
+    transform: translateY(-3px);
+}
+
+/* Different color for special function buttons */
+form input.btnColor {
+    color: #fbc02d;
+}
+
+/* Equal button */
+form input.equal {
+    background-color: #4387a2;
+    color: white;
+    width: 160px;
+}
+
+form input.equal:hover {
+    background-color: #e3e30a;
+}
+
+/* Display Styles */
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+    border: 3px solid #26c6da;
+    width: 85%;
+    background-color: #263238;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2000; /* Increased z-index to ensure notification appears on top */
+    font-size: 14px;
+}
+
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    .calculator form input {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+        margin: 8px;
+    }
+
+    form .display input {
+        font-size: 35px;
+    }
+
+    form input.equal {
+        width: 140px;
+    }
+
+    .footer {
+        padding: 15px 0;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    .calculator form input {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 6px;
+    }
+
+    form .display input {
+        font-size: 28px;
+    }
+
+    form input.equal {
+        width: 120px;
+    }
+}
+
+@media (max-width: 320px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    .calculator form input {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    form .display input {
+        font-size: 24px;
+    }
+
+    form input.equal {
+        width: 110px;
+    }
+}
